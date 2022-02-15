@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+  font-family: 'webfont';
+  src: url('fonts/webfont.woff2') format('woff2'),
+       url('fonts/webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin open-sans {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin header_m {
+  @include open-sans;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@mixin paragraph_m {
+  @include open-sans;
+  font-size: 16px;
+  line-height: 1.6;
+}

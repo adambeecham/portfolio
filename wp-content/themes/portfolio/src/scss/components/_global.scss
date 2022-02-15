@@ -1,0 +1,16 @@
+html {
+
+}
+
+body {
+  @include open-sans;
+}
+
+.page-container {
+
+}
+
+::selection {
+  background: #ACCEF7;
+  color: $white;
+}

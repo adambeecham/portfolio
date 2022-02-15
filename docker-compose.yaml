@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: bgnbegin
+      MYSQL_USER: bgnbegin
+      MYSQL_PASSWORD: bgnbegin
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: db
+      MYSQL_PASSWORD: bgnbegin
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    volumes: ['./:/var/www/html']
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: bgnbegin
+      WORDPRESS_DB_PASSWORD: bgnbegin
+      WORDPRESS_DB_NAME: bgnbegin
+      WORDPRESS_TABLE_PREFIX: 'wp_'
+      WORDPRESS_DEBUG: 'true'
+volumes:
+  db_data: {}
+  wordpress_data: {}

@@ -1,0 +1,9 @@
+// Glob Loader auto loads these, in correct specificity order.
+// Due to how webpack works, new sass files won't automatically
+// be picked up by the watcher until you save an existing file.
+
+// Core
+@import "core/**/*";
+
+// Components
+@import "components/**/*"; 

@@ -1,0 +1,48 @@
+/**
+ * Breakpoints
+ * WordPress Breakpoints: 782px 600px
+ * Other Breakpoints: 1280px 960px 425px
+ * Example usage:
+ *
+ *   .container {
+ *     flex-direction: column;
+ *     @include above(782px) {
+ *       flex-direction: row;
+ *     }
+ *   }
+ *
+ */
+
+$breakpoints: (
+  xl:   1280px,
+  l:    960px,
+  m:    782px,
+  s:    600px,  
+  xs:   425px
+);
+ 
+@mixin below($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: #{inspect(map-get($breakpoints, $size))}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin above($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: #{inspect(map-get($breakpoints, $size))}) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}

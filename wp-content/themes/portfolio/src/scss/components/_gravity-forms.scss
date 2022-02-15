@@ -1,0 +1,60 @@
+.gform_wrapper {
+  .gform_heading {
+    .gform_title {
+
+    }
+    .gform_description {
+
+    }
+  }
+  .gform_body {
+    .gform_fields {
+
+    }
+    .gfield {
+      .gfield_label {
+
+      }
+      .ginput_container {
+
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="email"] {
+
+      }
+      textarea {
+
+      }
+      &.gform_validation_container {
+        display: none;
+      }
+      &.gfield_contains_required {
+
+      }
+      &.gfield_error {
+
+      }
+    }
+  }
+  .gform_footer {
+    img {
+      display: none;
+    }
+    .gform_button {
+
+    }
+  }
+  .validation_error {
+
+  }
+  .validation_message {
+
+  }
+}
+
+.gform_confirmation_wrapper {
+  .gform_confirmation_message {
+
+  }
+}

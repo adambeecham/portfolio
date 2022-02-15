@@ -1,0 +1,28 @@
+body {
+  .acf-postbox.seamless {
+    > .postbox-header {
+      position: relative;
+      display: block !important;
+      height: 0;
+      border-bottom: 0;
+      z-index: 99;
+      h2,
+      h3,
+      h4,
+      button {
+        display: none;
+      }
+      .handle-actions {
+        margin: 0 0 0 calc(100% - 30px);
+      }
+      .acf-hndle-cog {
+        display: block;
+        margin-left: auto;
+        padding: 8px 0 0;
+      }
+    }
+    > .acf-fields > .acf-accordion {
+      margin: 12px;
+    }
+  }
+}

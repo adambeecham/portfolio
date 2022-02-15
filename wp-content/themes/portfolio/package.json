@@ -1,0 +1,20 @@
+{
+  "name": "begin-2022",
+  "scripts": {
+    "dev": "mix watch",
+    "prod": "mix --production"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "browser-sync": "^2.24.4",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "gsap": "^3.6.1",
+    "import-glob-loader": "^1.1.0",
+    "laravel-mix": "^6.0.35",
+    "locomotive-scroll": "^4.1.2"
+  },
+  "devDependencies": {
+    "sass": "^1.43.4",
+    "sass-loader": "^12.1.0"
+  }
+}
